@@ -6,9 +6,9 @@
 [Открыть веб-страницу](https://staks-sor.github.io/vpn_index/src/html/index.html)
 
 ## Платформы
-- [Windows](https://ваш-username.github.io/название-репозитория/html/windows.html)
-- [Linux](https://ваш-username.github.io/название-репозитория/html/linux.html)
-- [Android](https://ваш-username.github.io/название-репозитория/html/android.html)
-- [iOS](https://ваш-username.github.io/название-репозитория/html/ios.html)
-- [MacOS](https://ваш-username.github.io/название-репозитория/html/macos.html)
-- [Chrome](https://ваш-username.github.io/название-репозитория/html/chrome.html)
+- [Windows](https://staks-sor.github.io/vpn_index/windows.html)
+- [Linux](https://staks-sor.github.io/vpn_index/linux.html)
+- [Android](https://staks-sor.github.io/vpn_index/android.html)
+- [iOS](https://staks-sor.github.io/vpn_index/ios.html)
+- [MacOS](https://staks-sor.github.io/vpn_index/macos.html)
+
