@@ -1,136 +1,136 @@
+/* База/фон */
+:root {
+  --bg1: #1e3c72;
+  --bg2: #2a5298;
+  --text: #ffffff;
+  --card-bg: rgba(255,255,255,0.10);
+  --card-border: rgba(255,255,255,0.28);
+  --card-border-hover: rgba(255,255,255,0.5);
+  --btn-grad-1: #007BFF;
+  --btn-grad-2: #00BFFF;
+  --btn-grad-1-hover: #0056b3;
+  --btn-grad-2-hover: #0088cc;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
-    min-height: 100vh;
-    color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  color: var(--text);
+  background: linear-gradient(135deg, var(--bg1), var(--bg2));
+  min-height: 100vh;
 }
 
+/* Карточка-обёртка */
 .container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  max-width: 880px;
+  margin: 24px auto;
+  padding: 24px;
+  background: var(--card-bg);
+  border: 1.5px solid var(--card-border);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.22);
 }
 
+/* Заголовок */
+header h1 {
+  margin: 0 0 6px;
+  font-size: clamp(22px, 3vw, 32px);
+}
+header p {
+  margin: 0;
+  opacity: 0.95;
+}
+
+/* Секция-платформы: грид адаптивный */
 .platform-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  margin: 20px 0 24px;
 }
 
-.platform-links .button {
-    flex: 1 1 auto;
-    max-width: 150px;
-    text-align: center;
-    padding: 15px 10px;
-    font-size: 14px;
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.2);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    color: white;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.platform-links .button:hover {
-    background: rgba(255, 255, 255, 0.3);
-    border-color: rgba(255, 255, 255, 0.5);
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-}
-
-footer {
-    margin-top: 40px;
-    font-size: 14px;
-    color: white;
-    text-align: center;
-}
-
-.support-button {
-    padding: 8px 16px;
-    font-size: 14px;
-    background: rgba(255, 255, 255, 0.2);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 8px;
-    transition: all 0.3s ease;
-}
-
-.support-button:hover {
-    background: rgba(255, 255, 255, 0.3);
-    border-color: rgba(255, 255, 255, 0.5);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-
-footer {
-    margin-top: 40px;
-    font-size: 14px;
-    color: white;
-    text-align: center;
-}
-
-.support-button {
-    padding: 8px 16px;
-    font-size: 14px;
-    background: rgba(255, 255, 255, 0.2);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 8px;
-    transition: all 0.3s ease;
-}
-
-.support-button:hover {
-    background: rgba(255, 255, 255, 0.3);
-    border-color: rgba(255, 255, 255, 0.5);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-
+/* Кнопки платформ */
 .button {
-    display: inline-block;
-    padding: 12px 24px;
-    background: linear-gradient(135deg, #007BFF, #00BFFF);
-    color: white;
-    border-radius: 12px;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
-    margin: 10px 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 12px;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease;
+  user-select: none;
+  background: linear-gradient(135deg, var(--btn-grad-1), var(--btn-grad-2));
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.35);
+  border: 2px solid transparent;
 }
+.button i { font-size: 18px; }
 
 .button:hover {
-    background: linear-gradient(135deg, #0056b3, #0088cc);
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.6);
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, var(--btn-grad-1-hover), var(--btn-grad-2-hover));
+  box-shadow: 0 6px 20px rgba(0,123,255,0.5);
 }
 
-.button:active {
-    transform: translateY(0);
-    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+/* Специальный вид внутри платформ-решётки (стеклянная кнопка) */
+.platform-links .button {
+  background: rgba(255,255,255,0.20);
+  border: 2px solid var(--card-border);
+  box-shadow: none;
+  font-weight: 600;
+}
+.platform-links .button:hover {
+  background: rgba(255,255,255,0.30);
+  border-color: var(--card-border-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
 }
 
+/* Описание/шаги */
+.description {
+  background: rgba(255,255,255,0.12);
+  border: 1.5px solid var(--card-border);
+  border-radius: 16px;
+  padding: 16px 18px;
+}
+.description h3 { margin: 0 0 8px; }
+.description ol { margin: 0 0 0 18px; }
+.description li { margin: 8px 0; }
+
+/* Подвал */
+footer {
+  margin-top: 32px;
+  text-align: center;
+  font-size: 14px;
+}
 .support-button {
-    padding: 8px 16px;
-    font-size: 14px;
-    background: rgba(255, 255, 255, 0.2);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 8px;
-    transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 8px;
+  padding: 10px 14px;
+  font-size: 14px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.20);
+  border: 2px solid var(--card-border);
+}
+.support-button:hover {
+  background: rgba(255,255,255,0.30);
+  border-color: var(--card-border-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.22);
 }
 
-.support-button:hover {
-    background: rgba(255, 255, 255, 0.3);
-    border-color: rgba(255, 255, 255, 0.5);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+/* Мобильные улучшения */
+@media (max-width: 480px) {
+  .container { margin: 16px; padding: 18px; }
+  .support-button { width: 100%; justify-content: center; margin: 10px 0 0; }
 }
